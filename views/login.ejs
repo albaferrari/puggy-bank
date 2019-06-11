@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <li><a href="/">Home</a></li>
+
+    <form method="POST" action="/login" class="form-container">
+        <h1>Login</h1>
+        <p>Enter your profile information</p>
+        <hr>
+        <label for="username"><b>Username</b></label>
+        <input type="text" name="username" placeholder="Username" autocomplete="off">
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password" placeholder="Enter Password" autocomplete="off">
+        <hr>
+        <div>
+            <input class="form-button register" type="submit" value="Login">
+            <a href="/register"><input class="form-button member" type="button" value="Not a member? Register"></a>
+        </div>
+    </form>
+</body>
+</html>

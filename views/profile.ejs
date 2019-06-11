@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+
+    <div class="card">
+        <img src="<%= user.profile_picture%>" alt="profile picture">
+        <h2><%=user.full_name%></h2>
+        <%= user.username%>
+        <%= user.bio%>
+        <hr>
+        <p>Followers: <%= user.counts.followed_by%></p>
+    </div>
+
+    <div>
+        <% posts.forEach(function (post) {%>
+            <div>
+                <img src="<%= post.images.thumbnail.url%>">
+            </div>
+        <%})%>
+    </div>
+</body>
+</html>
