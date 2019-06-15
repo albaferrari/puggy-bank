@@ -4,7 +4,8 @@ const { connector, Sequelize } = require("../configurations")
 const User = connector.define("user", {
     name: Sequelize.STRING,
     email: Sequelize.STRING,
-    password: Sequelize.STRING
+    password: Sequelize.STRING,
+    instagramUrl: Sequelize.STRING
 })
 
 module.exports = User;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style/style.css" />
+  <title>Account</title>
+</head>
+
+<body>
+  <div class="logoNavbarContainerPhone">
+    <img class="logoNavBar" src="/images/logo-small.png" alt="logo">
+  </div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+
+    <ul class="sidebarMenuInner">
+      <div class="logoNavbarContainer">
+        <img class="logoNavBar" src="/images/logo-small.png" alt="logo">
+      </div>
+      <li><a href="/">Home</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="accountMain">
+
+    <div class="donationText">
+      <h1 style="color: #9f6252;">Donations</h1>
+      <div class="donationCounter">
+        <h2><%=donations%></h2>
+        <p><%=number%></p>
+      </div>
+    </div>
+
+    <img src="/images/donationPic.png" alt="donations" class="donationPic">
+  </div>
+</body>
+
+</html>

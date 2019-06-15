@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style/style.css" />
     <title>Home</title>
 </head>
+
 <body>
-    <h1>Puggy Bank Home</h1>
-    <div class="menu">
-        <ul>
+
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
             <li><a href="/">Home</a></li>
             <li><a href="/login">Login</a></li>
-            <li><a href="/register">Start a page</a></li>
-            <li><a href="/profile">Profile</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/account">Account</a></li>
         </ul>
     </div>
+
+    <main>
+        <section class="logoContainer">
+            <img class="logo" src="/images/logo.png" alt="logo">
+        </section>
+
+        <div class="searchUsersText">
+            <p>Do you like someone’s work and want to contribute?
+                Donate what you can for their puggy bank!</p>
+        </div>
+
+        <form method="POST" action="/searchProfile" class="findUserForm">
+            <input type="text" placeholder="Enter name" name="name" class="findUserInput">
+            <input type="submit" value="" class="findUserButton">
+        </form>
+
+        <div class="infoTextHome">
+            <p><b>We like to keep it simple</b>:
+                you don’t need to create an account or login to donate,
+                just search for the creative you want to help
+                and add some coins in their puggy bank!</p>
+
+            <p style="font-size: 20px; margin-top: 20px;">There’s no such a thing as a too small donation, anything can
+                help!</p>
+            <img src="/images/coin.png" alt="coin" class="coin">
+        </div>
+
+    </main>
+
+
 </body>
+
 </html>
