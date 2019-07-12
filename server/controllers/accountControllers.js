@@ -3,14 +3,14 @@ const Donation = require("../database/models/Donation");
 module.exports = {
   getAccount: (req, res) => {
     let numberOfDonations;
-      Donation.findAll({ where: { userId: req.session.user.id } })
+      Donation.findAll({ where: { userId: req.session.appUser.id } })
       .then(donationsNumber => {
         numberOfDonations = donationsNumber.length;
         console.log(numberOfDonations);
         //not returning numberOfDonations all the times
         //refresh page (??)
         if (req.session.user && req.cookies) {
-          Donation.sum("amount", { where: { userId: req.session.user.id } })
+          Donation.sum("amount", { where: { userId: req.session.appUser.id } })
             .then(results => {
               let noDonationsYet = "You have no donations yet";
               if (isNaN(results)) {
